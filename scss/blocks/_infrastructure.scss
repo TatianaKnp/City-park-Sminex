@@ -1,0 +1,293 @@
+.infrastructure {
+    padding: 120px 0;
+
+    @include vp-1023 {
+        padding: 80px 0;
+    }
+
+    @media (max-width: 500px) {
+        padding: 60px 0 132px;
+    }
+
+    &__wrapper {
+        display: flex;
+        gap: 30px;
+        justify-content: space-between;
+        align-items: center;
+
+        @include vp-1023 {
+            flex-direction: column;
+            gap: 80px;
+        }       
+
+        @media (max-width: 500px) {
+            gap: 114px;
+        }
+    }
+
+    &__about {
+        max-width: 790px;
+
+        @include vp-1023 {
+            max-width: unset;
+            width: 100%;
+        }
+    }
+
+    &__heading {
+        font-size: 18px;
+        line-height: 26px;
+        margin: 0 0 30px;
+        letter-spacing: -0.01rem;
+
+        @include vp-1023 {
+            font-size: 14px;
+            line-height: 20px;
+            margin: 0 0 20px;
+            letter-spacing: unset;
+        }
+
+        @media (max-width: 500px) {
+            margin: 0 0 15px;
+        }
+    }
+
+    &__list {
+        column-gap: 44px;
+        columns: 2;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        @media (max-width: 1180px) {
+            columns: 1;
+        }
+
+        @include vp-1023 {
+            columns: 2;
+            column-gap: 60px;
+        }
+
+        @media (max-width: 650px) {
+            columns: 1;
+        }
+    }
+
+    &__item {
+        position: relative;
+        padding: 0 0 0 16px;
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: -0.02rem;
+
+        @include vp-1023 {
+            padding: 0 0 0 15px;
+            font-size: 14px;
+            line-height: 20px;  
+            letter-spacing: unset;        
+
+            @media (max-width: 500px) {
+                padding: 0 0 0 14px;
+            }
+        }
+
+        &--transp {
+            @media (max-width: 500px) {
+                width: 280px;
+            }
+        }
+    }
+
+    &__item:not(:last-child) {
+        margin: 0 0 15px;
+
+        @include vp-1023 {
+            margin: 0 0 10px;
+        }
+    }
+
+    &__item:before {
+        content: "";
+        position: absolute;
+        background: $color-fallow;
+        height: 6px;
+        width: 6px;
+        left: 0;
+        border-radius: 100%;
+        top: 0.7em;
+        transform: translateY(-50%);
+    }
+
+    &__numbers {
+        position: relative; 
+        display: flex;
+
+        @include vp-1023 {
+            width: 100%;
+        }
+
+        @media (max-width: 500px) {
+            width: 280px;
+        }
+    }
+
+    &__numbers-border {
+        @include vp-1023 {
+            display: none;
+        }
+    }
+
+    &__info {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 60px;
+        top: 14.3%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+
+        @include vp-1023 {
+            flex-direction: row;
+            justify-content: center;
+            position: relative;
+            justify-content: space-evenly;
+            column-gap: 38px;
+            row-gap: 38px;
+        }
+
+        @media (max-width: 500px) {
+            row-gap: 26px;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        max-width: 200px;
+
+        @include vp-1023 {
+            height: 100%;
+            justify-content: flex-start;
+            max-width: unset;
+            width: 150px;
+            height: 150px;
+        }
+
+        @media (max-width: 500px) {
+            position: relative;
+            width: 120px;
+            gap: 5px;
+            // justify-content: flex-end;
+            height: 70px;
+            
+            gap: 4px;
+        }    
+        
+        &--bottom{
+            @include vp-1023 {
+                justify-content: flex-end;
+            }
+
+            @media (max-width: 500px) {
+                justify-content: flex-start;
+            }
+        }
+        
+        &-wrap {
+            display: flex;
+            flex-direction: row;
+            gap: 14px;
+            align-items: flex-end;
+
+            @include vp-1023 {
+                gap: 5px;
+            }
+
+            &--plus {
+                align-items: center;
+            }
+        }
+
+        &-number {
+            font-family: Tenor Sans;
+            font-size: 48px;
+            line-height: 48px;
+            text-transform: uppercase;
+            color: $color-fallow;
+
+            @include vp-1023 {
+                font-size: 40px;
+                line-height: 40px;
+            }
+
+            @media (max-width: 500px) {
+                font-size: 28px;
+                line-height: 28px;
+
+            }
+        }
+
+        &-small {
+            font-family: Tenor Sans;
+            font-size: 20px;
+            line-height: 24px;
+            text-transform: uppercase;
+            color: $color-fallow;
+
+            @include vp-1023 {
+                font-size: 14px;
+                line-height: 18px;
+            }
+        }
+
+        &-white {
+            margin: 0;
+            font-family: Roboto Flex;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 26px;
+
+            @include vp-1023 {
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+    }
+
+    &__icon-playground {
+        display: none;
+        flex-shrink: 0;
+
+        @include vp-1023 {
+            display: block;
+            margin: 10px 0 0 0;
+        }
+
+        @media (max-width: 500px) {
+            position: absolute;
+            bottom: -103%;
+        }
+        
+    }
+
+    &__icon-waves {
+        display: none;
+        flex-shrink: 0;
+
+        @include vp-1023 {
+            display: block;
+            margin: 0 0 10px;
+        }
+
+        @media (max-width: 500px) {
+            position: absolute;
+            bottom: 106%;
+        }
+    }
+}

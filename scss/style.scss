@@ -1,0 +1,24 @@
+/* Global */
+/* ------------------------------------ */
+@import "global/_normalize";
+@import "global/_fonts";
+@import "global/_variables";
+@import "global/_mixins";
+@import "global/_reboot";
+@import "global/_container";
+@import "global/_visually-hidden";
+
+/* Blocks */
+/* ------------------------------------ */
+@import "blocks/_header";
+@import "blocks/_hero.scss";
+@import "blocks/_emblem.scss";
+@import "blocks/_image.scss";
+@import "blocks/_infrastructure.scss";
+@import "blocks/_advantages.scss";
+@import "blocks/_architecture.scss";
+@import "blocks/_options.scss";
+
+
+@import "blocks/_socials";
+@import "blocks/_footer";
